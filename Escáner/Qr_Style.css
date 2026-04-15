@@ -1,0 +1,179 @@
+/* Definición de variables para colores y fuentes */
+:root {
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --background-color: #f8f9fa;
+    --primary-bg-color: #ff5c5c;
+    --primary-bg-color-hover: #ff3030;
+    --primary-bg-color-active: #e60000;
+    --text-color-light: white;
+    --text-color-dark: #333;
+    --box-shadow-light: rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: rgba(0, 0, 0, 0.2);
+    --border-color: #dee2e6;
+}
+
+/* Estilos globales */
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    background-image: url("../Imágenes/Fondos/Fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Encabezado */
+.header {
+    color: var(--text-color-light);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--box-shadow-light);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: var(--font-primary);
+}
+
+/* Navegación */
+nav {
+    margin-bottom: 20px;
+}
+
+/* Contenido principal */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: -75px;
+}
+
+.row.justify-content-center.mt-5 {
+    margin-top: 10px; /* Reduce el margen superior */
+}
+
+/* Estructura de filas y columnas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+.col-sm-4 {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--box-shadow-light);
+    padding: 20px;
+    text-align: center;
+    margin: 6px;
+    flex: 1 1 calc(33.333% - 20px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.col-sm-4:hover {
+    box-shadow: 0 6px 12px var(--box-shadow-dark);
+    transform: scale(1.02);
+}
+
+/* Lector de QR */
+#reader {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--box-shadow-light);
+}
+
+/* Botones */
+.cerrar_Seccion-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color-light);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cerrar_Seccion-button:hover {
+    background-color: var(--primary-bg-color-hover);
+    transform: scale(1.05);
+}
+
+.cerrar_Seccion-button:active {
+    background-color: var(--primary-bg-color-active);
+}
+
+.cerrar_Seccion-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 92, 92, 0.5);
+}
+
+/* Sección de asientos */
+#asientosDisponibles, #totalAsientos {
+    width: calc(50% - 10px); /* Cambiado a 50% para colocar los inputs a la par */
+    padding: 15px;
+    margin: 10px 5px; /* Ajuste de margen */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px var(--box-shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+
+#asientosDisponibles {
+    background-color: #e9ecef;
+}
+
+/* Información del usuario */
+.usuario-info {
+    position: relative; /* Necesario para el posicionamiento del botón */
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left; /* Alinear a la izquierda */
+}
+
+/* Ajustes para el botón de cerrar sesión */
+.cerrar_Seccion-button {
+    position: absolute; /* Posición absoluta para el botón */
+    top: 20px; /* Ajusta la distancia desde el top */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .col-sm-4 {
+        flex: 1 1 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    #reader {
+        width: 100%;
+    }
+
+    .usuario-info {
+        padding: 10px;
+        display: block; /* Cambia a bloque en pantallas pequeñas */
+    }
+
+    /* Mantiene la posición absoluta del botón en pantallas pequeñas */
+    .cerrar_Seccion-button {
+        top: 75px; /* Ajusta la distancia desde el top */
+        right: 10px; /* Ajusta la distancia desde la derecha */
+    }
+
+    #asientosDisponibles, #totalAsientos {
+        width: calc(50% - 10px); /* Asegúrate de que se alineen correctamente */
+        margin: 10px 5px; /* Espaciado ajustado */
+    }
+}

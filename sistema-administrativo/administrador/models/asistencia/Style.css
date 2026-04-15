@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    background-color: #e0f2f1; /* Verde agua claro */
+    color: #004d40; /* Verde agua oscuro */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Mejora la legibilidad */
+    text-rendering: optimizeLegibility; /* Optimiza la legibilidad */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff; /* Fondo blanco para el contenedor principal */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Limita el ancho máximo para mejor visualización */
+    margin: 20px auto; /* Centra el contenedor */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Títulos */
+h2 {
+    color: #00796b; /* Verde agua moderado */
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem; /* Tamaño de fuente adaptable */
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 1rem; /* Espacio entre los campos del formulario */
+}
+
+.form-group label {
+    color: #00796b; /* Verde agua moderado */
+    font-weight: 600; /* Resalta las etiquetas */
+    display: block; /* Asegura que las etiquetas ocupen todo el ancho disponible */
+    margin-bottom: 0.5rem; /* Espacio debajo de la etiqueta */
+}
+
+.form-control, .form-control-file {
+    border-color: #004d40; /* Verde agua oscuro */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    padding: 0.75rem; /* Mejora el espacio interno */
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-bottom: 1rem; /* Espacio entre los campos del formulario */
+    transition: border-color 0.3s ease; /* Transición suave al interactuar */
+}
+
+.form-control:focus, .form-control-file:focus {
+    border-color: #00796b; /* Cambia el color de borde al enfocar */
+    outline: none; /* Elimina el borde por defecto del navegador */
+}
+
+/* Botones */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center; /* Centra el texto en los botones */
+    display: inline-block; /* Asegura que los botones se comporten como elementos en línea */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+}
+
+.btn-primary {
+    background-color: #004d40; /* Verde agua oscuro */
+    border-color: #004d40; /* Verde agua oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #00332c; /* Verde agua más oscuro para hover */
+    border-color: #00332c; /* Verde agua más oscuro para hover */
+}
+
+.btn-success {
+    background-color: #00796b; /* Verde agua moderado */
+    border-color: #00796b; /* Verde agua moderado */
+    color: #ffffff; /* Texto blanco */
+}
+
+.btn-success:hover {
+    background-color: #004d40; /* Verde agua oscuro para hover */
+    border-color: #004d40; /* Verde agua oscuro para hover */
+}
+
+/* Estilos de la tabla */
+.table {
+    background-color: #ffffff; /* Fondo blanco para la tabla */
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.table thead {
+    background-color: #00796b; /* Verde agua moderado */
+    color: #ffffff; /* Texto blanco en el encabezado */
+    text-transform: uppercase; /* Encabezados en mayúsculas */
+    font-weight: 700; /* Encabezados más resaltados */
+}
+
+.table th, .table td {
+    padding: 12px;
+    border-bottom: 1px solid #004d40; /* Verde agua oscuro */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f1f8f7; /* Verde agua muy claro */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Blanco */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background: #e0f2f1; /* Fondo claro verde agua */
+}
+
+.main-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-cont {
+    background: #ffffff; /* Fondo blanco */
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc-header {
+    width: 100%;
+    height: auto;
+    text-align: center;  
+}
+
+.desc-header img {
+    width: 90%;
+}
+
+.desc-header p {
+    font-size: 2rem; /* Utilizar rem para mejor escalabilidad */
+    color: #00796b; /* Verde agua oscuro */
+}
+
+.cont-header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-header h1 {
+    color: #000000; /* Verde agua oscuro */
+}
+
+.cont-header form {
+    width: 21.875rem; /* 350px convertido a rem para escalabilidad */
+    height: auto;
+    border: 1px solid #00796b; /* Verde agua oscuro */
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background: #ffffff; /* Fondo blanco para el formulario */
+}
+
+.cont-header form .label {
+    display: block;
+    padding: 0.625rem; /* 10px convertido a rem */
+}
+
+.cont-header input {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.9375rem; /* 15px convertido a rem */
+}
+
+.app-sidebar__user-avatar {
+    width: 3rem; /* 48px convertido a rem */
+    padding: 0.375rem; /* 6px convertido a rem */
+    background: #fff;
+}
+
+.app .app-sidebar, .app .app-nav, .app .app-header {
+    background: #004d40; /* Verde agua muy oscuro */
+}
+
+.app-sidebar__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-sidebar__toggle::before {
+    display: none;
+}
+
+/* Adaptaciones para pantallas móviles */
+@media screen and (max-width: 850px) {
+    .main-header, .main-cont {
+        grid-template-columns: 1fr; /* Disposición en una columna */
+        height: auto;
+    }
+
+    .desc-header p {
+        font-size: 1.5rem; /* Reducción de tamaño de fuente en móviles */
+    }
+
+    .cont-header form {
+        width: 90%; /* Aumentar la anchura del formulario para ocupar más espacio */
+        margin: 1rem; /* Reducir márgenes */
+    }
+    .app-sidebar__user-avatar {
+        width: 2.5rem; /* Reducción del tamaño del avatar en móviles */
+    }
+}

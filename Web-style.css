@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    background-color: #eaebea;
+    font-weight: normal;
+    background-image: url("../Pagina_xampp/Imágenes/Fondos/Fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+header {
+    width: 225px;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.nav_link {
+    color: base-color;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    border-radius: 6px;
+    padding-left: 6px;
+    background: #f6f8fa;
+}
+
+.list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex; 
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff; /* Fondo blanco por defecto */
+}
+
+.list_item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list_item:hover .list_show {
+    height: auto;
+    transition: height 0.4s;
+}
+
+.list_button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.arrow .list_arrow {
+    transform: rotate(90deg);
+}
+
+.list_arrow {
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list_show {
+    width: 80%;
+    margin-left: auto;
+    border: 2px solid base-color;
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+
+.list_img {
+    position: relative;
+}
+
+.Icono_bus {
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Icono_bus:hover {
+    transform: scale(1.1);
+}
+
+p {
+    margin-top: 5px;
+    margin-left: 35px;
+}
+
+.Logo_Colegio {
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 28px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.Logo_Colegio:hover {
+    transform: scale(1.1);
+}
+@media screen and (max-width: 850px) {
+    header {
+        margin: 0; /* Elimina márgenes para dispositivos móviles */
+    }
+
+    .nav_link {
+        padding: 2.5rem 0; /* Ajusta el padding para mejor escalabilidad */
+    }
+
+    .list {
+        height: auto; /* Permite crecimiento natural del contenido */
+        flex-direction: column; /* Disposición vertical en dispositivos móviles */
+        background: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    }
+
+    p {
+        margin-left: 0.625rem; /* Margen ajustado para adaptación */
+    }
+
+    .list_button {
+        width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    }
+
+    .list_show {
+        width: 90%; /* Ajusta el ancho del elemento */
+    }
+
+    .Icono_bus {
+        position: relative; /* Posición relativa para ajustar con respecto a su contenedor */
+        top: 1.25rem; /* Espaciado superior consistente */
+        height: 9.00rem; /* Altura escalable y consistente */
+        width: 9.00rem; /* Ancho escalable y consistente */
+        max-width: 100%; /* Asegura que no se exceda el ancho del contenedor */
+        box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+    }
+    
+    .Logo_Colegio {
+        position: relative;
+        left: 1.1775rem; /* Espaciado desde la izquierda */
+        width: 6.25rem; /* Ancho escalable */
+        height: 6.25rem; /* Altura escalable */
+    }
+    
+    /* NUEVOS ESTILOS */
+    
+    /* Contenedor principal adaptado lateralmente */
+    .main-container {
+        display: flex;
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        height: 100vh; /* Ocupa la altura total de la ventana */
+    }
+
+    /* Barra lateral (se convierte en barra superior en móviles) */
+    .navbar-lateral {
+        width: 100%; /* Barra lateral ocupa todo el ancho en móviles */
+        height: auto; /* Ajusta la altura según el contenido */
+        background-color: #f8f9fa; /* Color de fondo claro */
+        padding: 20px;
+        flex-direction: column; /* Mantiene los elementos en columna */
+    }
+
+    /* Espaciado de los elementos en la barra de navegación */
+    .navbar-nav .nav-item {
+        margin-bottom: 10px; /* Reduce el espaciado entre ítems para móviles */
+    }
+
+    /* Alineación del ícono y texto */
+    .nav-link img {
+        margin-right: 10px; /* Espaciado entre ícono y texto */
+    }
+
+    /* Estilo del contenido para móviles */
+    .content {
+        padding: 15px; /* Ajusta el padding del contenido */
+        flex: 1; /* El contenido ocupa el espacio restante */
+    }
+
+    /* Estilo del footer en móviles */
+    footer {
+        padding: 15px;
+        text-align: center; /* Alineación centrada del texto del footer */
+    }
+}
